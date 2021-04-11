@@ -141,9 +141,9 @@ func (dht *DHT) getExpirationTime(key []byte) time.Time {
 // The base58 encoded identifier will be returned if the store is successful.
 func (dht *DHT) Store(data []byte) (id string, err error) {
 	key := dht.store.GetKey(data)
-	expiration := dht.getExpirationTime(key)
-	replication := time.Now().Add(dht.options.TReplicate)
-	dht.store.Store(key, data, replication, expiration, true)
+	//expiration := dht.getExpirationTime(key)
+	//replication := time.Now().Add(dht.options.TReplicate)
+	//dht.store.Store(key, data, replication, expiration, true)
 	_, _, err = dht.iterate(iterateStore, key[:], data)
 	if err != nil {
 		return "", err

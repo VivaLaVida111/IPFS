@@ -19,7 +19,7 @@ func main() {
 	var bIP = flag.String("bip", "", "IP Address to bootstrap against")
 	var bPort = flag.String("bport", "", "Port to bootstrap against")
 	var help = flag.Bool("help", false, "Display Help")
-	var stun = flag.Bool("stun", true, "Use STUN")
+	var stun = flag.Bool("stun", false, "Use STUN")
 
 	flag.Parse()
 
