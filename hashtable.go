@@ -138,6 +138,7 @@ func (ht *hashTable) doesNodeExistInBucket(bucket int, node []byte) bool {
 			return true
 		}
 	}
+	
 	return false
 }
 
